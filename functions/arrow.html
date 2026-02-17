@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//1)
+  function a( callback){
+     console.log( callback(10,20));
+  }
+  a((a,b)=> a+b)
+
+//2
+   function b( callback){
+     console.log( callback("Surekha"));
+  }
+  b((name)=> "Hello "+name)
+  
+  
+//3
+  function c( callback){
+     console.log( callback(101));
+  }
+  c(num=>{
+    if(num%2==0){
+      return true;
+     }else{
+      return false;
+      
+     }
+})
+
+//4)
+function d( callback){
+     console.log( callback(101));
+  }
+  d(num=>{
+    if(num>10){
+      return true;
+     }else{
+      return false;
+      
+     }
+})
+
+//5)
+function e( callback){
+     console.log( callback("Surekha","Sushma Gopidesi"));
+  }
+  e((name1,name2)=>{
+    
+  if(name1.length>name2.length){
+    return name1;
+  }
+  else if(name1.length=name2.length){
+    return name2;
+  }
+  else{
+     return "Equal length";
+  }
+})
+
+
+    </script>
+</body>
+</html>

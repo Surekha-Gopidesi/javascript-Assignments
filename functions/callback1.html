@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ //1
+ function processNumber(num,callback){
+     num= num*num;
+     console.log(callback(num)); 
+ }
+ function result(num){
+  return num;
+ }
+processNumber(4,result)
+
+//2
+function forEachElement(arr,callback){
+  var num;
+  for(i=0;i<arr.length;i++){
+    callback(arr[i]);
+  }
+}
+function x(num){
+   console.log(num);
+   
+}
+forEachElement([3,5,7,9],x)
+
+//3
+function sayHello(name, callback) {
+  setTimeout(function() {
+    callback("Hello, " + name + "!");
+  }, 1000);
+}
+function msg(message) {
+  console.log(message);
+}
+
+sayHello("Surekha",msg );
+
+//4
+function checkEven(num,even,odd){
+  if(num%2==0){
+    console.log("even");
+    
+  }
+  else{
+    console.log("odd");
+    
+  }
+}
+function even(){
+  console.log("Even");
+
+}
+function odd(){
+  console.log("odd"); 
+}
+checkEven(3,even,odd)
+
+//5
+function performTasks(n,fun1,fun2){
+    n=fun1(n);
+    n=fun2(n);
+  
+    return n;
+
+}
+function fun1(n){
+    return n+5;
+}
+function fun2(n){
+    return n*2
+}
+console.log(performTasks(2,fun1,fun2));
+
+    </script>
+</body>
+</html>

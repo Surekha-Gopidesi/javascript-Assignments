@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+//sum
+function sum(val,callback){
+    callback(val+5);
+}
+
+//sub
+function sub(val,callback){
+    callback(val-5);
+}
+
+//mul
+function mul(val,callback){
+    callback(val*5);
+}
+
+//div
+function div(val,callback){
+    callback(val/5);
+}
+
+
+sum(20, a => {
+    console.log(a);
+
+    sub(20, b => {
+        console.log(b);
+
+        mul(30, c => {
+            console.log(c);
+
+            div(40, d => {
+                console.log(d);
+            });
+
+        });
+
+    });
+
+});
+
+</script>
+</body>
+</html>

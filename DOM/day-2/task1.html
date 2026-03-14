@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student=[
+            {
+                "id":"1",
+                "name":"surekha",
+                "course":"java"
+            },
+            {
+                "id":"2",
+                "name":"sushma",
+                "course":"python"
+            },
+            {
+                "id":"3",
+                "name":"Bhanu",
+                "course":"js"
+            },
+            {
+                "id":"4",
+                "name":"Prakash",
+                "course":"dsa"
+            }
+        ]
+       let div=document.createElement("div");
+       student.forEach(ele=>{
+         let p1=document.createElement("p");
+        p1.innerHTML="<b>ID </b>:"+ele.id;
+        let p2=document.createElement("p");
+        p2.innerHTML="<b>Name </b>:"+"<b>"+ele.name+"</b>";
+        let p3=document.createElement("p");
+        p3.innerHTML="<b>Course </b>:"+ele.course;
+       
+        div.append(p1,p2,p3);
+        p1.style.marginBottom="0px"
+         p2.style.margin="0"
+          p3.style.margin="0"
+          div.style.border="1px"
+
+       });
+      console.log(document.body.appendChild(div));
+  
+        
+    </script>
+</body>
+</html>

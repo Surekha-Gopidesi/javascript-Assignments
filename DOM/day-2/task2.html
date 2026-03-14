@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            background-color: rgb(2, 2, 80);
+            color:white;
+            font-size: 20px;
+            
+        }
+        .pink{
+            background-color: white;
+            color:rgb(32, 32, 135);
+            font-size: 2rem;
+        }
+        .pink1{
+            background-color: deeppink;
+            color: white;
+            font-size: 2rem;
+        }
+        .data{
+            color:rgb(1, 1, 48);
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <script>
+   let table=document.createElement("table");
+   table.border="2";
+   table.width="600px"
+   table.cellPadding="5px";
+   table.style.borderCollapse="collapse"
+   table.cellSpacing="5px";
+   let tr1=document.createElement("tr");
+   let team=["INDIA","NEW ZEALAND"];
+   team.forEach(ele=>{
+    let td1=document.createElement("td");
+    td1.innerText=ele;
+    td1.className="pink"
+    td1.padding="10px"
+    td1.style.textAlign="center"
+    td1.cellPadding="20px"
+
+tr1.appendChild(td1)
+td1.colSpan="3"
+   })
+   
+
+   tr2=document.createElement("tr");
+   td2=document.createElement("td");
+   td2.innerText="Narendra Modi Stadium, Ahmadabad";
+   td2.id="main"
+   
+   td2.colSpan="6";
+   td2.style.textAlign="center"
+   tr2.appendChild(td2)
+  
+   
+
+   let tr3=document.createElement("tr");
+   let teamscore=["255-5","159"];
+   teamscore.forEach(ele=>{
+    let td3=document.createElement("td");
+    td3.innerText=ele;
+    td3.className="pink1"
+   
+    td3.style.textAlign="center"
+    td3.cellPadding="20px"
+
+tr3.appendChild(td3)
+td3.colSpan="3"
+   })
+
+
+   let arr1=["Samson",89,46,"Seifert",52,26];
+   let tr4=document.createElement("tr");
+   arr1.forEach(ele=>{
+    let td4=document.createElement("td");
+    td4.innerText=ele;
+    td4.className="data"
+    tr4.appendChild(td4);
+   })
+
+
+   let arr2=["Kishan",54,25,"Santner",43,35];
+   let tr5=document.createElement("tr");
+   arr2.forEach(ele=>{
+    let td5=document.createElement("td");
+    td5.innerText=ele;
+    td5.className="data"
+    tr5.appendChild(td5);
+   })
+
+
+   let arr3=["Abishek",52,21,"Mitchell",17,11];
+   let tr6=document.createElement("tr");
+   arr3.forEach(ele=>{
+    let td6=document.createElement("td");
+    td6.innerText=ele;
+    td6.className="data"
+    tr6.appendChild(td6);
+   })
+
+   let arr4=["Dube",26,8,"Allen",52,26];
+   let tr7=document.createElement("tr");
+   arr4.forEach(ele=>{
+    let td7=document.createElement("td");
+    td7.innerText=ele;
+    td7.className="data"
+    tr7.appendChild(td7);
+   })
+
+
+   let tr8=document.createElement("tr");
+   let teamovers=["20 Overs","19 Overs"];
+   teamovers.forEach(ele=>{
+    let td8=document.createElement("td");
+    td8.innerText=ele;
+    td8.className="pink1"
+   
+    td8.style.textAlign="center"
+    td8.cellPadding="20px"
+
+tr8.appendChild(td8)
+td8.colSpan="3"
+   })
+
+let arr5=["Neesham","3-46",4,"Bumra","4-15",4];
+   let tr9=document.createElement("tr");
+   arr5.forEach(ele=>{
+    let td9=document.createElement("td");
+    td9.innerText=ele;
+    td9.className="data"
+    tr9.appendChild(td9);
+   })
+
+
+   let arr6=["Ravindra","1-32",2,"Akshar","3-27",3];
+   let tr10=document.createElement("tr");
+   arr6.forEach(ele=>{
+    let td10=document.createElement("td");
+    td10.innerText=ele;
+    td10.className="data"
+    tr10.appendChild(td10);
+   })
+
+
+   let arr7=["Henry","1-49",4,"Abishek","1-5",1];
+   let tr11=document.createElement("tr");
+   arr7.forEach(ele=>{
+    let td11=document.createElement("td");
+    td11.innerText=ele;
+    td11.className="data"
+    tr11.appendChild(td11);
+   })
+
+   let arr8=["","","","Hardik","1-36",4];
+   let tr12=document.createElement("tr");
+   arr8.forEach(ele=>{
+    let td12=document.createElement("td");
+    td12.innerText=ele;
+    td12.className="data"
+    tr12.appendChild(td12);
+   })
+
+tr13=document.createElement("tr");
+   td13=document.createElement("td");
+   td13.innerText="భారత్ 96 పరుగుల భారీ తేడాతో ఘన విజయం";
+   td13.id="main"
+   
+   td13.colSpan="6";
+   td13.style.textAlign="center"
+   tr13.appendChild(td13)
+  
+
+
+ table.append(tr1,tr2,tr3,tr4,tr5,tr6,tr7,tr8,tr9,tr10,tr11,tr12,tr13)
+   console.log(document.body.appendChild(table));
+    </script>
+</body>
+</html>

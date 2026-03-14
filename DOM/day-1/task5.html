@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let div=document.createElement("div")
+        let arr=["submit","login","logout","reset","signup"];
+        arr.forEach(text=>{
+            let button=document.createElement("button");
+            let br=document.createElement("br");
+            button.innerText=text;
+            div.appendChild(button)
+            div.appendChild(br)
+            button.style.margin="5px"
+            
+           
+            
+        })
+        console.log(document.body.appendChild(div));
+         
+
+    </script>
+</body>
+</html>

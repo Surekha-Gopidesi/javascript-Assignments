@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let table=document.createElement("table");
+        table.border="1";
+        let tr=document.createElement("tr");
+       
+        table.appendChild(tr);
+        let arr=["mornig","Afternoon","evening"];
+        arr.forEach(text=>{
+             let td=document.createElement("td");
+             tr.appendChild(td);
+            td.innerText=text;
+        } )
+
+        console.log(document.body.appendChild(table));
+        
+
+    </script>
+</body>
+</html>

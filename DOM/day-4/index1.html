@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency App</title>
+    <link rel="stylesheet" href="./style2.css">
+   
+</head>
+<body>
+
+<div class="app">
+
+    <div class="header">
+        <h2>💱 Currency Converter</h2>
+    </div>
+
+    <div class="search">
+        <input type="number" id="amount" placeholder="Enter amount">
+    </div>
+
+    <div class="search">
+        <select id="from">
+            <option value="USD">USD</option>
+            <option value="INR">INR</option>
+            <option value="EUR">EUR</option>
+        </select>
+
+        <select id="to">
+            <option value="INR">INR</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select>
+    </div>
+
+    <div class="search">
+        <button onclick="convertCurrency()">Convert</button>
+    </div>
+
+    <div id="container"></div>
+
+</div>
+
+<script>
+function convertCurrency(){
+    let amount = document.getElementById("amount").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+
+    getCurrency(amount, from, to);
+}
+
+async function getCurrency(amount, from, to){
+    const url = `https://api.exchangerate-api.com/v4/latest/${from}`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        let rate = data.rates[to];
+        let result = amount * rate;
+
+        show(result, amount, from, to);
+
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+function show(result, amount, from, to){
+    let container = document.getElementById("container");
+
+    container.innerHTML = `
+        <div class="temp">${result.toFixed(2)}</div>
+    
+        
+    `;
+}
+</script>
+
+</body>
+</html>

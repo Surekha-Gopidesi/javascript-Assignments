@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+
+    </div>
+    <script>
+        async function fechData() {
+            let res=await fetch("https://dummyjson.com/quotes");
+            let data=await res.json();
+            console.log(data)
+            
+        }
+        function getData( data){
+            let container=document.getElementsByClassName("container")[0]
+            data.array.forEach(ele => {
+                let p=document.createElement("p")
+             p.innerHTML=`<h3>Limit:${limit}</h3>`
+          container.appendChild(p);
+            
+               
+            });
+
+        }
+        fechData();
+
+    </script>
+</body>
+</html>

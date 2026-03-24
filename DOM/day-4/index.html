@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <div class="app">
+
+    <div class="header">
+        <h2>🌤 Weather App</h2>
+    </div>
+
+    <div class="search">
+        <input type="text" id="input" placeholder="Enter city">
+        <button onclick="showWeather()">Search</button>
+    </div>
+
+    <div id="container"></div>
+
+</div>
+    <script>
+function showWeather(){
+    let input=document.getElementById("input")
+    getWeather(input.value)
+}
+async function getWeather(city){
+    const url=`https://open-weather13.p.rapidapi.com/city?city=${city}&lang=EN`;
+    const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': 'f2a9ec4dd7mshb2ceeb0706a4475p1eb426jsnb14d36b9faee',
+		'x-rapidapi-host': 'open-weather13.p.rapidapi.com',
+		'Content-Type': 'application/json'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.json();
+	// console.log(result.main.temp);
+    show(result.main.temp)
+} catch (error) {
+	console.error(error);
+}
+}
+function show(data){
+    let container = document.getElementById("container")
+
+    container.innerHTML = `
+        <div class="temp">${data}°C</div>
+        <div class="city">Current Weather</div>
+
+        <div class="details">
+            <div>💧 60%</div>
+            <div>🌬 12 km/h</div>
+        </div>
+    `
+}
+
+
+    </script>
+</body>
+</html>

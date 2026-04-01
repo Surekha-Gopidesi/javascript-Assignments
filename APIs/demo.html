@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//POST THE DATA
+// const URL="http://localhost:3000/demo";
+// let options={"method":"POST",
+//     "headers":{
+//         "content-Type":"Application/json"
+//     },
+//     "body":JSON.stringify({
+//         "id":"4",
+//         "name":"peter"
+//     })
+// }
+// fetch(URL,options).then(res=>{
+//     if(res.ok){
+//         console.log("Posted successfully ",res.status);
+    
+        
+//     }
+// })
+
+// const URL="http://localhost:3000/demo";
+// let options={
+//     "method":"PATCH",
+//     "headers":{
+//         "content-Type":"Application/json"
+//     },
+//     "body":JSON.stringify({
+//         "id":"1",
+//         "name":"surekha",
+        
+//     })
+// }
+// fetch(URL,options).then(res=>{
+// if(res.ok){
+//     console.log(res.status,res.statusText)
+// }
+// else{
+//     console.log("wrong"); 
+// }
+// })
+fetch("http://localhost:3000/demo").then(res=>res.json()).then(data=>{
+    for(let i=0;i<data.length;i++){
+        fetch('http://localhost:3000/demo/${data[i].id}',{"method":"DELETE"})
+        .then(res=>{
+            if(res.ok){
+                console.log("DELETED",res.status);
+                
+            }
+            else{
+                console.log("Not deleted");
+                
+            }
+        })
+    }
+})
+    </script>
+</body>
+</html>

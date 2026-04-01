@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ //push()       
+let numbers = [1, 2, 3, 4, 5];
+console.log("Adding Element  :"+numbers.push(6))
+console.log("===============");
+//pop()
+let num2 = [1, 2, 3, 4];
+console.log("Removing Element  :"+num2.pop());
+console.log("===============");
+
+//map()
+let double = numbers.map(n => n * 2);
+console.log("double amounts :"+double);
+console.log("===============");
+
+// filter() 
+let even = numbers.filter(n => n % 2 === 0);
+console.log("Even Numbers :"+even);
+console.log("===============");
+
+// forEach() 
+numbers.forEach(n => console.log(n));
+
+    </script>
+</body>
+</html>

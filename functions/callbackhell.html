@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function loginUser(callback) {
+  setTimeout(() => {
+    console.log("User Logged In");
+    callback();
+  }, 1000);
+
+}
+
+function getUserDetails(callback) {
+
+  setTimeout(() => {
+    console.log("User Details Fetched");
+    callback();
+  }, 1000);
+}
+
+function placeOrder(callback) {
+  setTimeout(() => {
+    console.log("Order Placed");
+    callback();
+  }, 1000);
+
+}
+
+function paymentDone() {
+  setTimeout(() => {
+    console.log("Payment Successful");
+  }, 1000);
+}
+
+
+loginUser(() => {
+
+  getUserDetails(() => {
+    placeOrder(() => {
+      paymentDone();
+    });
+  });
+});
+
+    </script>
+</body>
+</html>

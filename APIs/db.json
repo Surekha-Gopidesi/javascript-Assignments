@@ -1,0 +1,26 @@
+{
+  "Data": [
+    
+    {
+      "id": "1",
+      "name": "surekha",
+      "course": "JAVA"
+    },
+    {
+      "id": "2",
+      "name": "Sushma",
+      "course": "HTML"
+    },
+    {
+      "id": "3",
+      "name": "Bhanu",
+      "course": "CSS"
+    },
+    {
+      "id": "4",
+      "name": "Suri",
+      "course": "SQL"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

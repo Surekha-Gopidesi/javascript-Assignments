@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function print() {
+
+  try {
+    // let res = await fetch("https://dummyjson.com/quotes");
+    //let res = await fetch("https://dummyjson.com/todos");
+    // let res = await fetch("https://jsonplaceholder.typicode.com/photos");
+      let res = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+
+    if(!res.ok){
+      throw new Error("Something went wrong");
+    }
+
+    let data = await res.json();
+
+    console.log(data);
+
+  } catch(error) {
+
+    console.log(error.message);
+  }
+
+}
+
+print();
+    </script>
+</body>
+</html>

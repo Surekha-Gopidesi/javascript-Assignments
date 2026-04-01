@@ -1,0 +1,29 @@
+{
+  "demo": [
+    {
+      "id": "1",
+      "name": "surekha"
+    },
+    {
+      "id": "2",
+      "name": "Sushma"
+    },
+    {
+      "id": "3",
+      "name": "Bhanu"
+    },
+    {
+      "id": "4",
+      "name": "Surekha"
+    },
+    {
+      "id": "4",
+      "name": "peter"
+    },
+    {
+      "id": "4",
+      "name": "peter"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
